@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="VSAT_Praktika:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/VSAT_Praktika_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="VSAT_Praktika/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="VSAT_Praktika" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
