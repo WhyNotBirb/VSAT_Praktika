@@ -6,11 +6,116 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false"%>
+
 <html>
   <head>
     <title>$Title$</title>
+        <link href="${pageContext.request.contextPath}/res/style.css" type="text/css" rel="stylesheet" />
+
   </head>
   <body>
-  $END$
+
+
+
+<div class="conatiner">
+  <form action="">
+    <input type="radio" value="year" name="timeInterval">Metai
+    <input type="radio" value="quarter" name="timeInterval">Ketvirtis
+    <input type="radio" value="month" name="timeInterval">Menuo
+    <input type="radio" value="week" name="timeInterval">Savaite
+    <input type="radio" value="day" name="timeInterval">Diena
+      <br>
+    <input type="radio" value="other" name="timeInterval">Kita
+    <label>nuo</label>
+    <input type="Date">
+    <label>iki</label>
+    <input type="Date">
+  </form>
+  <div class="list">
+   <table>
+     <thead>
+      <tr>
+        <th>
+          Id
+        </th>
+        <th>
+          Užduoties tipas
+        </th>
+        <th>
+          Iniciatorius
+        </th>
+        <th>
+          Atsakingas asmuo
+        </th>
+        <th>
+          Statusas
+        </th>
+        <th>
+          Paskutinis pakeitimas
+        </th>
+        <th>
+          Failas
+        </th>
+      </tr>
+     <tr>
+       <th>
+         <input type="text">
+       </th>
+       <th>
+         <input type="text">
+       </th>
+       <th>
+         <input type="text">
+       </th>
+       <th>
+         <input type="text">
+       </th>
+       <th>
+         <input type="text">
+       </th>
+       <th>
+         <input type="text">
+       </th>
+       <th>
+         <input type="text">
+       </th>
+     </tr>
+     </thead>
+     <tbody>
+      <tr>
+        <td>
+          data1
+        </td>
+        <td>
+          data2
+        </td>
+        <td>
+          data3
+        </td>
+        <td>
+          data4
+        </td>
+        <td>
+          data5
+        </td>
+        <td>
+          data6
+        </td>
+        <td>
+          data7
+        </td>
+      </tr>
+     </tbody>
+   </table>
+
+  </div>
+<div>
+  <input type="button">PDF
+  <input type="button">XSL
+  <input type="button">Word
+</div>
+</div>
   </body>
 </html>
