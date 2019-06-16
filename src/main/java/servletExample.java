@@ -21,7 +21,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)th
 
 
 
-    for(int i = 1; i <=7; i++){
+    for(int i = 1; i <=50; i++){
 
         List cols = new ArrayList();
         for(int j = 1; j <=7; j++){

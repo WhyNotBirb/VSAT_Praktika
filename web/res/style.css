@@ -1,3 +1,98 @@
 body{
     background-color: beige;
 }
+
+/* Sortable tables */
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+    width: inherit;
+    table-layout: fixed;
+
+}
+.container{
+    display: contents;
+width: inherit;
+    /*position: fixed;*/
+    height: 250px;
+    overflow: auto;
+    border: 1px solid black;
+
+}
+thead, tbody {
+    display: block;
+    border: 1px solid black;
+}
+tbody.container{
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+td{
+    border: 1px solid black;
+}
+tr{
+width: max-content;
+}
+ul{
+list-style-type: none;
+}
+li{
+    display: inline;
+    width: auto;
+}
+.grid-container{
+    display: grid;
+}
+
+.grid-item-1{
+
+    grid-row:1 ;
+}
+.grid-item-2{
+
+    grid-row: 2;
+
+}
+
+.grid-item-3{
+
+
+    grid-row: 3;
+}
+.grid-2{
+    width: 50%;
+    display: grid;
+}
+.filter1{
+grid-column: 1;
+}
+.filter2{
+    grid-column: 2;
+}
+.filter3{
+    grid-column: 3;
+}
+.filter4{
+    grid-column: 4;
+}
+.filter5{
+    grid-column: 5;
+}
+.filter6{
+    grid-column: 6;
+}
+.filter7{
+    grid-column: 7;
+}
+.sortable{
+    grid-column: span 7;
+    table-layout: fixed;
+
+}
+.scroll{
+    display: block;
+    overflow-y: scroll;
+}
