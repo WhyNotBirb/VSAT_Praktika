@@ -5,18 +5,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-@WebServlet(name ="default", urlPatterns ="/default" )
+@WebServlet("/default")
 public class servletExample extends HttpServlet {
 
-    public String test="hello my name is...";
+
 
 protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
 
-    request.setAttribute("test", test);
+    List rows = new ArrayList();
 
 
+
+
+    for(int i = 1; i <=7; i++){
+
+        List cols = new ArrayList();
+        for(int j = 1; j <=7; j++){
+            cols.add(String.valueOf(i* j));
+        }
+        //request.setAttribute("cols",cols);
+        rows.add(cols);
+    }
+    request.setAttribute("rows", rows);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.include(request, response);

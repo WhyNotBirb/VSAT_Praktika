@@ -7,17 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page isELIgnored="false"%>
+
 
 <html>
   <head>
     <title>$Title$</title>
-        <link href="${pageContext.request.contextPath}/res/style.css" type="text/css" rel="stylesheet" />
+    <link href="<c:url value="res/style.css" />" rel="stylesheet" type="text/css">
 
   </head>
   <body>
 
-
+<c:out value="${test}"/>
 
 <div class="conatiner">
   <form action="">
@@ -34,6 +34,7 @@
     <input type="Date">
   </form>
   <div class="list">
+
    <table>
      <thead>
       <tr>
@@ -84,31 +85,27 @@
      </tr>
      </thead>
      <tbody>
-      <tr>
-        <td>
-          data1
-        </td>
-        <td>
-          data2
-        </td>
-        <td>
-          data3
-        </td>
-        <td>
-          data4
-        </td>
-        <td>
-          data5
-        </td>
-        <td>
-          data6
-        </td>
-        <td>
-          data7
-        </td>
-      </tr>
+
+
+      <c:forEach var="row" items="${rows}">
+
+
+
+          <tr>
+
+          <c:forEach var="col" items="${row}">
+              <td>
+              ${col}
+              </td>
+
+          </c:forEach>
+
+          </tr>
+
+      </c:forEach>
      </tbody>
    </table>
+
 
   </div>
 <div>
@@ -117,5 +114,7 @@
   <input type="button">Word
 </div>
 </div>
+
+
   </body>
 </html>
