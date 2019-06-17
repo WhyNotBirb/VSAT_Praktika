@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Maven: fish.payara.distributions:payara:5.191">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/fish/payara/distributions/payara/5.191/payara-5.191.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/fish/payara/distributions/payara/5.191/payara-5.191-javadoc.jar!/" />
     </JAVADOC>

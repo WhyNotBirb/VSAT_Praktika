@@ -11,9 +11,14 @@
 
 <html>
   <head>
+      <script src="<c:url value="libs/jquery-3.4.1.js"/>"></script>
     <title>$Title$</title>
     <link href="<c:url value="res/style.css" />" rel="stylesheet" type="text/css">
-    <script src="<c:url value="js/sorttable.js"/>"></script>
+      <link rel="stylesheet" type="text/css" href="<c:url value="libs/DataTables/datatables.css"/>">
+
+      <script type="text/javascript" charset="utf8" src="<c:url value="libs/DataTables/datatables.js"/>"></script>
+
+      <script src="<c:url value="js/tableScript.js"/>"></script>
 <%--    <script src="js/sorttable.js"></script>--%>
   </head>
   <body>
@@ -62,7 +67,7 @@
 
 
 
-                       <table class="sortable">
+                       <table id="table-id">
                          <thead>
 
                           <tr>
@@ -90,7 +95,7 @@
                           </tr>
                          </thead>
                          <tbody class="container">
-                         <div class="scroll">
+
                           <c:forEach var="row" items="${rows}">
                               <tr>
                               <c:forEach var="col" items="${row}">
@@ -100,13 +105,13 @@
                               </c:forEach>
                               </tr>
                           </c:forEach>
-                         </div>
+
                          </tbody>
                        </table>
 
-                </div>
 
-</div>
+
+
 <div>
   <input type="button" value="PDF">
   <input type="button" value="XSL">
@@ -115,5 +120,8 @@
 
 
 
+                        </select>
+</div>
+</div>
   </body>
 </html>
